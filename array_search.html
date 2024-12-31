@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array Search</title>
+    <script>
+
+      function serachEl() {
+        let array = [30, 40, 50, 60, 70, 10, 70];
+        let element = document.getElementById('el').value;
+        let index = undefined;
+
+        for (let i = 0; i <= array.length - 1; i++) {
+          if (array[i] == element) {
+            index = i;
+            break;
+          }
+        }
+        alert(index);
+
+        // console.warn(array.indexOf(element));  default function
+        // console.warn(index);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="'text'" placeholder="Please enter value" id="el" />
+    <button onclick="serachEl()">Search Element</button>
+  </body>
+</html>
