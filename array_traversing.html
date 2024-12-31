@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>document</title>
+    <script>
+        let data = [10,22,30,40,50,20,50];
+        function getElement(){
+            let el = document.getElementById('element').value;
+            if(el <data.length && el>0){
+                alert(data[el])
+            }else{
+                alert("Please enter valid input");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="element">
+    <button onclick="getElement()">Get Element</button>
+</body>
+</html>

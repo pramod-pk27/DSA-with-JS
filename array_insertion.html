@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Array insertion</title>
+
+    <script>
+        function insertEl(){
+            let array = [10,20,30,340,40,50];
+            let newEl = document.getElementById('el').value;
+            newEl = parseInt(newEl);
+            let position = document.getElementById('pn').value;
+
+            for(let i=array.length-1; i>=0; i--){
+                if(i>=position){
+                    array[i+1]=array[i];
+                    if(i==position){
+                        array[i]=newEl;
+                    }
+                }
+            }
+            console.log(array);
+        }
+
+    </script>
+
+</head>
+<body>
+    <input type="text" placeholder="Enter value" id="el">    
+    <input type="text" placeholder="Enter Position" id="pn">    
+    <button onclick="insertEl()">Insert Element</button>
+</body>
+</html>
